@@ -45,7 +45,8 @@ export const bookings = (app) => {
       get: [],
       create: [
         schemaHooks.validateData(bookingsDataValidator),
-        schemaHooks.resolveData(bookingsDataResolver)
+        schemaHooks.resolveData(bookingsDataResolver),
+        calculateTotalPrice
       ],
       patch: [
         schemaHooks.validateData(bookingsPatchValidator),
@@ -60,4 +61,16 @@ export const bookings = (app) => {
       all: []
     }
   })
+
+  async function calculateTotalPrice(context) {
+    const { data } = context
+
+    const guests = parseInt(data.numOfGuests) || 0
+    const price = parseFloat(data.pricePerPerson) || 0
+    const serviceCharge = parseFloat(data.serviceCharge) || 0
+
+    data.totalPaid = String((guests * price) + serviceCharge)
+
+    return context
+  }
 }
