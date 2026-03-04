@@ -41,8 +41,8 @@ export const tours = (app) => {
     },
     after: {
       all: [],
-      find: [addReviewSummary],
-      get: [addReviewSummary]
+      find: [addReviewSummary, addPriceCategory],
+      get: [addReviewSummary, addPriceCategory]
     },
     error: {
       all: []
@@ -81,6 +81,27 @@ export const tours = (app) => {
         context.result.data[index].reviewStats = await computeReviewStats( tourId )
       }
     }
+    return context
+  }
+
+  async function addPriceCategory(context) {
+    const { result } = context
+
+    const categorize = (tour) => {
+      if (tour.price < 50) return 'Budget'
+      if (tour.price <= 150) return 'Mid-range'
+      return 'Luxury'
+    }
+
+    if (context.id) {
+      result.priceCategory = categorize(result)
+    } else if (result.data) {
+      result.data = result.data.map((tour) => ({
+        ...tour,
+        priceCategory: categorize(tour)
+      }))
+    }
+
     return context
   }
 
