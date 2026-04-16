@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import 'dotenv/config'
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
 import { app } from './app.js'
 import { logger } from './logger.js'
 

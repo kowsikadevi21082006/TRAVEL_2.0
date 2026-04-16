@@ -22,10 +22,16 @@ export default function Section1() {
             </h1>
           </div>
           <div className="set-3">
+<<<<<<< HEAD
           Travel opens doors to new cultures, breathtaking landscapes, 
           and unforgettable experiences. Whether you're seeking adventure
           or relaxation, let us guide you to the perfect destination and 
           help create memories that will last a lifetime.
+=======
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste
+            quam nihil consequuntur exercitationem. Corrupti nulla sed soluta,
+            blanditiis minus itaque tempora debitis. Vitae, praesentium?
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
           </div>
         </div>
         <div className="right">

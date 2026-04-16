@@ -57,10 +57,15 @@
     "@feathersjs/typebox": "^5.0.24",
     "compression": "^1.7.4",
     "mongodb": "^6.5.0",
+<<<<<<< HEAD
     "mongodb-memory-server": "^8.11.0",
     "path": "^0.12.7",
     "winston": "^3.13.0",
     "dotenv": "^16.4.1"
+=======
+    "path": "^0.12.7",
+    "winston": "^3.13.0"
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
   },
   "devDependencies": {
     "@feathersjs/cli": "^5.0.24",

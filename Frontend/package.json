@@ -8,7 +8,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "dotenv": "^16.4.5",
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",

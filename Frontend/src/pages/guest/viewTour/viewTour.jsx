@@ -136,6 +136,11 @@ export default function ViewTour() {
       reviewInputRef.current.value = "";
       unselectRatingStar();
 
+<<<<<<< HEAD
+=======
+      // update avg & total for the new added data.
+      // simple UI only update. not fetched from backend
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
       setAvgRatings((prev) =>
         parseFloat(
           (prev * totalRatings + reviewRating) / (totalRatings + 1)

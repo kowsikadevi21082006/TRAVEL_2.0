@@ -32,6 +32,7 @@ app.use(urlencoded({ extended: true }))
 app.use('/', serveStatic(app.get('public')))
 // app.use('/', express.static(path.join(__dirname, '../build')));
 
+<<<<<<< HEAD
 // Allow overriding MongoDB connection via environment variable for local runs
 const envMongoRaw = process.env.MONGODB_URI || process.env.MONGODB
 // Safety: avoid accidentally using unrelated env values (like API keys) as Mongo URI
@@ -140,6 +141,8 @@ app.post('/api/v1/customer-care', async (req, res) => {
   }
 })
 
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
 
 // Configure services and real-time functionality
 app.configure(rest("/api/v1"))

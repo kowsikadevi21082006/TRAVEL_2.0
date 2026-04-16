@@ -56,6 +56,7 @@
                 }
             }
     }
+<<<<<<< HEAD
 
         /* Chat widget */
         .chat-widget{
@@ -74,4 +75,6 @@
             margin: 0;
             border-radius: 8px;
         }
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
 }

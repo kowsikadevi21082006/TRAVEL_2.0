@@ -8,8 +8,11 @@ services:
       - "3030:3030"
     environment:
       - PORT=3030
+<<<<<<< HEAD
       # Provide your Cerebras settings via environment when running containers.
       # Do NOT commit your API key to the repo. Example: set CEREBRAS_API_KEY in your host env or .env file.
       - CEREBRAS_API_KEY
       - CEREBRAS_API_URL
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
     restart: unless-stopped

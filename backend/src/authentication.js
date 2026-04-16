@@ -9,6 +9,7 @@ export const authentication = (app) => {
   authentication.register('local', new LocalStrategy())
 
   app.use('authentication', authentication)
+<<<<<<< HEAD
 
   // In-memory attempt store: key -> { count, first }
   // Key is constructed from IP + identifier (email/username)
@@ -69,3 +70,6 @@ export const authentication = (app) => {
     }
   })
 }
+=======
+}
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3

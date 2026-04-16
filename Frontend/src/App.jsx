@@ -12,7 +12,10 @@ import { useSelector } from "react-redux";
 import MyBookings from "./pages/session/myBookings/myBookings";
 import { useEffect } from "react";
 import app from "./feathers";
+<<<<<<< HEAD
 import CustomerCare from "./components/customerCare/CustomerCare";
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
 
 function App() {
   const userStore = useSelector((state) => state.user);
@@ -40,7 +43,10 @@ function App() {
         <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+<<<<<<< HEAD
       <CustomerCare />
+=======
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
     </div>
   );
 }

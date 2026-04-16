@@ -1,6 +1,7 @@
 // For more information about this file see https://dove.feathersjs.com/guides/cli/databases.html
 import { MongoClient } from 'mongodb'
 
+<<<<<<< HEAD
 // Fallback to an in-memory MongoDB when no connection is configured
 export const mongodb = (app) => {
   // Create a promise immediately and set it on the app so services can use it.
@@ -53,4 +54,12 @@ export const mongodb = (app) => {
   })()
 
   app.set('mongodbClient', dbPromise)
+=======
+export const mongodb = (app) => {
+  const connection = app.get('mongodb')
+  const database = new URL(connection).pathname.substring(1)
+  const mongoClient = MongoClient.connect(connection).then((client) => client.db(database))
+
+  app.set('mongodbClient', mongoClient)
+>>>>>>> 8b6be90b7f90cefe062533ef1e0248a5b03f38b3
 }
