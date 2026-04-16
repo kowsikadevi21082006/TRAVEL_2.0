@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3030:3030"
+    environment:
+      - PORT=3030
+      # Provide your Cerebras settings via environment when running containers.
+      # Do NOT commit your API key to the repo. Example: set CEREBRAS_API_KEY in your host env or .env file.
+      - CEREBRAS_API_KEY
+      - CEREBRAS_API_URL
+    restart: unless-stopped
